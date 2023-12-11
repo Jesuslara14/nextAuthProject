@@ -1,0 +1,34 @@
+.authFormWrapper{
+    margin: auto;
+    padding: 3rem;
+    width:25vw;
+    min-height: 65vh;
+    background-color: gainsboro;
+    border-radius: 15px;
+}
+
+.input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: ghostwhite;
+    padding: 20px;
+}
+
+.submit{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(120, 161, 223);
+    padding: 20px;
+    line-height: 0px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 40;
+}
