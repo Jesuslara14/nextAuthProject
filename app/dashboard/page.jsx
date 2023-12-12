@@ -7,17 +7,26 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Dashboard(){
-    return(
-        <div className={styles.dashboardWrapper}>
-            <h1>Welcome</h1>
-            <div className={styles.postStream}>
+    const router = useRouter();
+    const session = useSession();
 
+    if(session.status === "unauthenticated"){
+        router.push('/dashboard/login');
+    }
+
+    if(session.status === "authenticated"){
+        return(
+            <div className={styles.dashboardWrapper}>
+                <h1>Welcome</h1>
+                <div className={styles.postStream}>
+
+                </div>
+                <div className={styles.postFormWrapper}>
+                    <form>
+                        <input type="text" />
+                    </form>
+                </div>
             </div>
-            <div className={styles.postFormWrapper}>
-                <form>
-                    <input type="text" />
-                </form>
-            </div>
-        </div>
-    )
+        )
+    }
 }

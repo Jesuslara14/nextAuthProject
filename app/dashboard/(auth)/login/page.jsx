@@ -31,14 +31,14 @@ export default function Login(){
         const password = e.target[1].value;
 
         signIn("credentials", {
-        email,
-        password,
+            email,
+            password,
         });
     };
 
     return(
         <div className={styles.authFormWrapper}>
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form method="POST" className={styles.form} onSubmit={handleSubmit}>
                 {error && "Something went wrong!"}
                 <input type="email" name='email' id='email' placeholder='Email' className={styles.input}/>
                 <input type="password" name='password' id='password' placeholder='Password' className={styles.input}/>
